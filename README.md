@@ -1,6 +1,6 @@
 # Node.js Fetch inconsistencies
 ## 407
-If the server responds with a 407 fetch will fail on both node.js and chromium browsers with the following error.
+If the server responds with a 407, fetch will fail on both node.js and chromium browsers with the following error.
 ```bash
 Error: TypeError: fetch failed
     at node:internal/deps/undici/undici:12344:11
@@ -15,7 +15,7 @@ Error: TypeError: fetch failed
       at async mainFetch (node:internal/deps/undici/undici:10332:20)
 }
 ```
-Sending the same request with cURL or fetch in Firefox cURL results in the expected response with a 407 status
+Sending the same request with cURL or fetch in Firefox results in the expected response with a 407 status
 ## 421
 If the client sends a request with a body of length greater than 0 and the server responds with a 421 status then node.js fetch will fail with the following error
 ```bash
